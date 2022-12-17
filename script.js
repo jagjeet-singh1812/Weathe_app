@@ -59,13 +59,13 @@ updateweather('Gujrat');
 
 async function updatephoto(temperature){
     if(temperature>20){
-        x.src="./Images/sun2.jpg";
+        x.src="./sun2.jpg";
     }
     else if(temperature>=8 && temperature<=20){
-        x.src="./Images/rain+sun.svg";
+        x.src="./rain+sun.svg";
     }
     else if(temperature<8){
-        x.src="./Images/cold.jpg";
+        x.src="./cold.jpg";
     }
 }
 
