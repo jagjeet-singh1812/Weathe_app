@@ -18,6 +18,7 @@ header{
 
 .box{
     width: 20vh;
+    height:0.5vh;
     margin:auto;
     border:2px solid rgb(41, 109, 227);
     border-radius: 20px;

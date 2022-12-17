@@ -20,7 +20,7 @@ function updateweather(city){
     fetch(url, options)
 	.then(response => response.json())
 	.then(response => {
-        console.log(response)
+        // console.log(response)
         // cloud_pct.innerHTML=response.cloud_pct
         feels_like.innerHTML=response.feels_like
         humidity.innerHTML=response.humidity
@@ -59,13 +59,13 @@ updateweather('Gujrat');
 
 async function updatephoto(temperature){
     if(temperature>20){
-        x.src="/Images/sun2.jpg";
+        x.src="./Images/sun2.jpg";
     }
     else if(temperature>=8 && temperature<=20){
-        x.src="/Images/rain+sun.svg";
+        x.src="./Images/rain+sun.svg";
     }
     else if(temperature<8){
-        x.src="/Images/cold.jpg";
+        x.src="./Images/cold.jpg";
     }
 }
 
