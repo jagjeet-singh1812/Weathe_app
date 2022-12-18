@@ -41,3 +41,28 @@ img {
     height: 100%; 
     object-fit: contain;
 }
+
+.convertor{
+    height:40vh;
+  margin-top:5vh;
+}
+
+.container{
+    margin-top: 3vh;
+}
+.anana{
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+}
+.ans{
+    border: 2px solid rgb(79, 77, 77);
+    width:20vw;
+    border-radius: 20px;
+    /* margin:1vw; */
+    gap:1vh;
+}
+.ans span{
+    text-align: center;display: flex;
+    justify-content: center;
+}

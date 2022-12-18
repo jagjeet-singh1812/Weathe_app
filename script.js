@@ -4,7 +4,7 @@ let pun=document.getElementById('punjab');
 let c=document.getElementById('city');
 let submitbtn= document.getElementById('btn');
 let x=document.getElementById('img');
-
+let inputtempertature=document.getElementById('inputvalue');
 let temperature=19;
 const options = {
 	method: 'GET',
@@ -59,13 +59,89 @@ updateweather('Gujrat');
 
 async function updatephoto(temperature){
     if(temperature>20){
-        x.src="./sun2.jpg";
+        x.src="sun2.jpg";
     }
     else if(temperature>=8 && temperature<=20){
-        x.src="./rain+sun.svg";
+        x.src="rain+sun.svg";
     }
     else if(temperature<8){
-        x.src="./cold.jpg";
+        x.src="cold.jpg";
     }
+}
+
+let inputtext;
+function covertemp(inputconvt,outputconvt){
+    // ouputans.innerHTML=12;
+    inputtext=Number.parseInt(inputtempertature.value);
+    // console.log(inputtempertature.value);
+    // console.log(inputtext);
+    // ouputans.innerHTML="14";
+ let ans ;
+ ans=inputtext;
+    if(inputconvt=="Degree" && outputconvt=="Kelvin"){
+        ans+=273.15;
+        ouputans.innerHTML=`${ans} K`
+    }
+    if(inputconvt=="Kelvin" && outputconvt=="Degree"){
+        ans-=273.15;
+        ans=ans.toFixed(4);
+        ouputans.innerHTML=`${ans} &#8451;`
+    }
+    if(inputconvt=="Degree" && outputconvt=="Fahrenheit"){
+    ans=((ans)*(9/5))+ 32;
+    ans=ans.toFixed(4);
+    ouputans.innerHTML=`${ans} &#8457;`
+    }
+
+    if(inputconvt=="Fahrenheit" && outputconvt=="Degree"){
+    ans=((ans-32)*(5/9));
+    ans=ans.toFixed(4);
+    ouputans.innerHTML=`${ans} &#8451;`
+    }
+
+    if(inputconvt=="Fahrenheit" && outputconvt=="Kelvin"){
+    ans=((ans-32)*(5/9))+273.15;
+    ans=ans.toFixed(4);
+    ouputans.innerHTML=`${ans} K`
+    }
+    if(inputconvt=="Kelvin" && outputconvt=="Fahrenheit"){
+    ans=((ans-273.15)*(9/5))+32;
+    ans=ans.toFixed(4);
+    ouputans.innerHTML=`${ans} &#8457;`
+    }
+    if(inputconvt=="Kelvin" && outputconvt=="Kelvin"){
+    ans=inputtext;
+    ans=ans.toFixed(4);
+    ouputans.innerHTML=`${ans} K`
+    }
+    if(inputconvt=="Degree" && outputconvt=="Degree"){
+    ans=inputtext;
+    ans=ans.toFixed(4);
+    ouputans.innerHTML=`${ans} &#8451;`
+    }
+    if(inputconvt=="Fahrenheit" && outputconvt=="Fahrenheit"){
+    ans=inputtext;
+    ans=ans.toFixed(4);
+    ouputans.innerHTML=`${ans} &#8457;`
+    }
+}
+
+// for input text of dropdown to change
+let inpty;
+function updatetempinput(input){
+console.log(input);
+updatetextinput.innerHTML=input;
+inpty=input;
+ouputans.innerHTML="";
+// console.log(inputtempertature.value);
+}
+
+// for output text
+function updatetempoutput(output){
+    console.log(output);
+    updatetextoutput.innerHTML=output;
+    covertemp(inpty,output);
+    console.log(inpty);
+    console.log(output);
 }
 

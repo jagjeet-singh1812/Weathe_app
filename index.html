@@ -48,20 +48,20 @@
         </div>
     </nav>
 
-    <header my-6>
+    <header my-12>
         <h1>Weather for <span id="city">Mumbai</span></h1>
     </header>
 <div class="container">
     <div class="box"></div>
 </div>
-<div class="container">
+<div class="container my-6">
     <div class="box1">
         <img id="img"src="./rain+sun.svg" alt="">
     </div>
 </div>
     <main>
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="col">
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center my-8">
+            <div class="col my-10">
                 <div class="card mb-4 rounded-3 shadow-sm border-primary">
                     <div class="card-header py-3 text-bg-primary border-primary">
                         <h4 class="my-0 fw-normal">Temperature</h4>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col my-10">
                 <div class="card mb-4 rounded-3 shadow-sm border-primary">
                     <div class="card-header py-3 text-bg-primary border-primary">
                         <h4 class="my-0 fw-normal">Humidity</h4>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col my-10">
                 <div class="card mb-4 rounded-3 shadow-sm border-primary">
                     <div class="card-header py-3 text-bg-primary border-primary">
                         <h4 class="my-0 fw-normal">Wind info</h4>
@@ -113,6 +113,51 @@
             </div>
         </div>
 
+        <div class="container my-12">
+            <header><h2>TEMPERATURE CONVERTOR</h2></header>
+        </div>
+
+        <div class="container my-10 convertor"><div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">YOUR TEMPERATURE</h5>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button " id="inputvalue">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="updatetextinput">Dropdown</span></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" onclick="updatetempinput('Degree')">Degree</a></li>
+                      <li><hr class="dropdown-divider" ></li>
+                      <li><a class="dropdown-item" onclick="updatetempinput('Kelvin')">Kelvin</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" onclick="updatetempinput('Fahrenheit')">Fahrenheit</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">TO BE CONVERTED IN</h5>
+                  <div class="input-group mb-3">
+                    <!-- <input type="text" class="form-control" aria-label="Text input with dropdown button" id="ouputans"> -->
+                    <div class="anana"> 
+                        <div class="ans"><span id="ouputans">Answer</span></div>
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="updatetextoutput">Dropdown</span></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" onclick="updatetempoutput('Degree')">Degree</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item"  onclick="updatetempoutput('Kelvin')">Kelvin</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item"  onclick="updatetempoutput('Fahrenheit')">Fahrenheit</a></li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div></div>
     </main>
     <script src="script.js"></script>
 </body>
